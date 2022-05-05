@@ -37,30 +37,3 @@ svg_code = svg_code.replace('<svg ', '<svg  width="500px" height="500px" ')
 svg_code = svg_code.replace('<path ', '<path style="stroke: black; stroke-width: 0.001" ')
 with open('japan.svg', 'w') as fp:
     fp.write(svg_code)
-
-
-"""cmap = plt.get_cmap('coolwarm')
-cols = ['#%02X%02X%02X' % (cmap(x[i], bytes=True)[:3]) for i in range(1,46)]
-svg = pref_map(range(1,48), qpqo=japanmap.get_data(move_okinawa=True), width=2.5,cols=cols, tostr=True)
-
-with open('japan.svg', 'w') as fp:
-    fp.write(svg)
-"""
-
-"""
-x=df_i['転入超過数']
-cmap = plt.get_cmap('coolwarm')
-cols = ['#%02X%02X%02X' % (cmap(x[i], bytes=True)[:3]) for i in range(1,47)]
-s = japanmap.pref_map(range(1,47), # qpqo=jp.get_data(move_okinawa=True),
-                cols=cols, tostr=True)
-
-# 独立した図として認識させるために頭書きを加える：
-s = s.replace('<svg ',
-              '<svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="500" height="500" ')
-
-# 境界線を黒で描くには：
-# s = s.replace('<path ', '<path stroke="black" stroke-width="0.001" ')
-
-with open("190613b.svg", "w") as f:
-    f.write(s)
-"""
